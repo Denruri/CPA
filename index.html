@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPA Offer Landing Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background: #f7f7f7; }
+    header { background: #4F46E5; color: white; padding: 20px; font-size: 1.5rem; font-weight: bold; }
+    main { padding: 40px 20px; }
+    button { background: #4F46E5; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1.2rem; cursor: pointer; }
+    button:hover { background: #4338CA; }
+    footer { margin-top: 40px; font-size: 0.9rem; color: #666; }
+  </style>
+  <script>
+    const DEFAULT_OFFER_URL = "https://your-cpa-link.com";
+    window.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const offer = urlParams.get("offer") || DEFAULT_OFFER_URL;
+      const btn = document.getElementById("cta");
+      btn.addEventListener("click", () => window.location.href = offer);
+    });
+  </script>
+</head>
+<body>
+  <header>🔥 Limited-Time Offer 🔥</header>
+  <main>
+    <h1>Get Started Today</h1>
+    <p>Click below to claim your exclusive deal.</p>
+    <button id="cta">Claim Offer</button>
+  </main>
+  <footer>© 2025 Your Brand • Powered by Netlify</footer>
+</body>
+</html>
