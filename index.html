@@ -4,10 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CPA Offer Landing Page</title>
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA4 Measurement ID
+  </script>
   <style>
     body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background: #f7f7f7; }
     header { background: #4F46E5; color: white; padding: 20px; font-size: 1.5rem; font-weight: bold; }
-    main { padding: 40px 20px; }
+    main { padding: 40px 20px; max-width: 700px; margin: auto; }
+    img { width: 100%; border-radius: 12px; margin-bottom: 20px; }
     button { background: #4F46E5; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1.2rem; cursor: pointer; }
     button:hover { background: #4338CA; }
     footer { margin-top: 40px; font-size: 0.9rem; color: #666; }
@@ -18,15 +27,19 @@
       const urlParams = new URLSearchParams(window.location.search);
       const offer = urlParams.get("offer") || DEFAULT_OFFER_URL;
       const btn = document.getElementById("cta");
-      btn.addEventListener("click", () => window.location.href = offer);
+      btn.addEventListener("click", () => {
+        gtag('event', 'cta_click', { 'event_category': 'engagement', 'event_label': offer });
+        window.location.href = offer;
+      });
     });
   </script>
 </head>
 <body>
   <header>🔥 Limited-Time Offer 🔥</header>
   <main>
+    <img src="./assets/offer-image.png" alt="Special Offer">
     <h1>Get Started Today</h1>
-    <p>Click below to claim your exclusive deal.</p>
+    <p>Claim your exclusive deal now and start benefiting immediately.</p>
     <button id="cta">Claim Offer</button>
   </main>
   <footer>© 2025 Your Brand • Powered by Netlify</footer>

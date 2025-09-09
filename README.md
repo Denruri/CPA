@@ -16,12 +16,11 @@ This is a lightweight HTML landing page for CPA offers — optimized for Netlify
   ```
   https://yoursite.netlify.app/?offer=https://your-offer.com&subid=123
   ```
-- Add images inside `assets/` and update paths in `index.html` if needed.
+- Replace `assets/offer-image.png` with your own product/offer image.
 
 ## 🛠 Updating
 
 - Push changes to `main` branch → Netlify redeploys automatically.
-- Use GitHub Actions or any CI/CD pipeline to automate tracking or versioning.
 
 ---
 Happy earning! 🚀
