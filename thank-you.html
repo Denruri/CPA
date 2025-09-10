@@ -1,20 +1,47 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¡Gracias por Registrarte!</title>
+  <title>Thank You - Download Your Guide</title>
   <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'Lead');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=Lead&noscript=1"/></noscript>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    gtag('event', 'conversion', {
+      send_to: 'G-XXXXXXXXXX',
+      event_category: 'CPA',
+      event_label: 'SurveyGuideDownload'
+    });
+  </script>
 </head>
 <body>
   <div class="container">
-    <h1>🎉 ¡Registro Completo!</h1>
-    <p>Gracias por completar el registro. Ahora puedes descargar tu guía gratuita de encuestas pagadas.</p>
-    <a href="assets/guia-encuestas.pdf" download class="download-btn">📥 Descargar Guía</a>
-    <p class="safe-note">Disfruta de tu guía y comienza a ganar completando encuestas. ¡Éxitos!</p>
+    <h1>🎉 Congratulations!</h1>
+    <p>You've unlocked your free guide. Click below to download:</p>
+    <a href="assets/guia-encuestas.pdf" class="cta-button" download>📥 Download Your Guide</a>
+    <p class="small-text">Thank you for completing the offer. Enjoy your free PDF guide and start earning!</p>
   </div>
-  <footer>
-    <p><a href="privacy-policy.html">Política de Privacidad</a> | <a href="terms-and-conditions.html">Términos y Condiciones</a></p>
-  </footer>
 </body>
 </html>
