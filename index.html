@@ -1,47 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CPA Offer Landing Page</title>
-  <!-- Google Analytics (GA4) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía de Encuestas Pagadas</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA4 Measurement ID
-  </script>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background: #f7f7f7; }
-    header { background: #4F46E5; color: white; padding: 20px; font-size: 1.5rem; font-weight: bold; }
-    main { padding: 40px 20px; max-width: 700px; margin: auto; }
-    img { width: 100%; border-radius: 12px; margin-bottom: 20px; }
-    button { background: #4F46E5; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1.2rem; cursor: pointer; }
-    button:hover { background: #4338CA; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #666; }
-  </style>
-  <script>
-    const DEFAULT_OFFER_URL = "https://optilinklock.com/1841749";
-    window.addEventListener("DOMContentLoaded", () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const offer = urlParams.get("offer") || DEFAULT_OFFER_URL;
-      const btn = document.getElementById("cta");
-      btn.addEventListener("click", () => {
-        gtag('event', 'cta_click', { 'event_category': 'engagement', 'event_label': offer });
-        window.location.href = offer;
-      });
-    });
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
 </head>
 <body>
-  <header>🔥 Limited-Time Offer 🔥</header>
-  <main>
-    <img src="./assets/offer-image.png" alt="Special Offer">
-    <h1>Get Started Today</h1>
-    <p>Claim your exclusive deal now and start benefiting immediately.</p>
-    <button id="cta">Claim Offer</button>
-  </main>
-  <footer>© 2025 • Powered by Netlify</footer>
+  <div class="container">
+    <img src="assets/surveys.png" alt="Encuestas en línea" class="hero-img">
+    <h1>¡Gana Dinero Desde Casa Completando Encuestas!</h1>
+    <p>Accede a nuestra <strong>Guía de Encuestas Pagadas</strong> y descubre las mejores plataformas que realmente pagan en Argentina. 
+    Solo completa el breve registro y descarga el PDF gratis.</p>
+    <ul class="benefits">
+      <li>✅ 100% Gratis – Sin pagos ocultos</li>
+      <li>✅ Plataformas probadas y confiables</li>
+      <li>✅ Disponible para Argentina y Latinoamérica</li>
+    </ul>
+    <button onclick="ctaClick()">Obtener Mi Guía Gratis</button>
+    <p class="safe-note">🔒 Seguro & Privado – Tu información está protegida</p>
+  </div>
+  <footer>
+    <p><a href="privacy-policy.html">Política de Privacidad</a> | <a href="terms-and-conditions.html">Términos y Condiciones</a></p>
+  </footer>
+  <script>
+    function ctaClick() {
+      fbq('track', 'Lead');
+      gtag('event', 'cta_click');
+      window.location.href = 'https://your-cpa-offer-link.com';
+    }
+  </script>
 </body>
 </html>

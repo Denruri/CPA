@@ -1,0 +1,88 @@
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f9fcff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.hero-img {
+  max-width: 120px;
+  margin-bottom: 15px;
+}
+h1 {
+  color: #2E86C1;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+ul.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  text-align: left;
+}
+ul.benefits li {
+  background: #EAF4FE;
+  margin: 5px 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+button {
+  background: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 80%;
+}
+button:hover {
+  background: #218838;
+}
+.safe-note {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #666;
+}
+footer {
+  text-align: center;
+  margin: 20px;
+  font-size: 14px;
+}
+footer a {
+  color: #2E86C1;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #2E86C1;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 15px;
+}
+.download-btn:hover {
+  background: #1F5F8B;
+}
